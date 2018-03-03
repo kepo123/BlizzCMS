@@ -171,7 +171,7 @@ class Shop_model extends CI_Model {
         $subject = $this->lang->line('store_senditem_subject');
         $message = $this->lang->line('store_senditem_text');
 
-        $this->m_soap->commandSoap('.send items '.$getCharName.' "'.$subject.'" "'.$message.'" '.$itemid, $soapUser, $soapPass, $soapHost, $soapPort, $soap_uri);
+        $this->m_soap->commandSoap('.send '.$getCharName.' "'.$subject.'" "'.$message.'" '.$itemid, $soapUser, $soapPass, $soapHost, $soapPort, $soap_uri);
 
         $data = array(
             'idshop' => $idshop,
